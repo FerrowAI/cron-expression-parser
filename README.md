@@ -1,4 +1,5 @@
 # cron-expression-parser
+![CI](https://github.com/FerrowAI/cron-expression-parser/actions/workflows/ci.yml/badge.svg)
 
 Zero-dependency 5-field cron expression parser for TypeScript/JavaScript:
 ranges, steps, lists, month/weekday names, precise validation errors,
