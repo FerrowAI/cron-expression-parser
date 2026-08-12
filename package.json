@@ -1,5 +1,5 @@
 {
-  "name": "cron-expression-parser",
+  "name": "@ferrow/cron-expression-parser",
   "version": "1.0.0",
   "description": "Zero-dependency 5-field cron parser: ranges/steps/lists/names, precise validation errors, nextRun/nextN with a bounded UTC search, and describe() for human-readable schedule sentences.",
   "main": "dist/index.js",

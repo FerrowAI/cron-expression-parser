@@ -26,7 +26,7 @@ All scheduling is UTC only — no DST handling (see README).
 ## Install
 
 ```bash
-npm install cron-expression-parser
+npm install @ferrow/cron-expression-parser
 ```
 
 Part of the Ferrow open-source toolkit: https://github.com/FerrowAI/ferrow-toolkit — sponsored by https://ferrow.ai

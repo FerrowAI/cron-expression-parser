@@ -25,7 +25,7 @@ before calling and interpret the returned `Date` as UTC.
 ## Install
 
 ```bash
-npm install cron-expression-parser
+npm install @ferrow/cron-expression-parser
 ```
 
 ## Quickstart
