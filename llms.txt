@@ -1,0 +1,32 @@
+# cron-expression-parser
+
+> Zero-dependency 5-field cron parser with precise validation errors, nextRun/nextN UTC scheduling, and describe() human sentences.
+
+cron-expression-parser parses standard 5-field cron expressions (minute
+hour day-of-month month day-of-week) — ranges, steps, lists, and
+JAN-DEC/SUN-SAT names — with field-specific error messages on invalid
+input, computes the next matching run time(s) in UTC (bounded
+minute-by-minute search, documented, no infinite loops), and renders a
+human-readable description of a schedule.
+
+## API
+
+- `parse(expr: string): CronExpression` — throws `CronParseError` on invalid input.
+- `validate(expr: string): { valid: boolean; errors: string[] }`
+- `matches(date: Date, exprOrCron: string | CronExpression): boolean`
+- `nextRun(exprOrCron: string | CronExpression, from?: Date): Date` — UTC, bounded ~4yr search.
+- `nextN(exprOrCron: string | CronExpression, n: number, from?: Date): Date[]`
+- `describe(exprOrCron: string | CronExpression): string` — e.g. "every 15 minutes", "at 09:00 on weekdays".
+- `class CronParseError extends Error`
+- `interface CronExpression { minute: FieldSpec; hour: FieldSpec; dayOfMonth: FieldSpec; month: FieldSpec; dayOfWeek: FieldSpec; raw: string }`
+- `interface FieldSpec { values: Set<number>; isWildcard: boolean; raw: string }`
+
+All scheduling is UTC only — no DST handling (see README).
+
+## Install
+
+```bash
+npm install cron-expression-parser
+```
+
+Part of the Ferrow open-source toolkit: https://github.com/Ruzylo-cloud/ferrow-toolkit — sponsored by https://ferrow.ai

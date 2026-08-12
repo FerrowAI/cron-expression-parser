@@ -1,0 +1,32 @@
+{
+  "name": "cron-expression-parser",
+  "version": "1.0.0",
+  "description": "Zero-dependency 5-field cron parser: ranges/steps/lists/names, precise validation errors, nextRun/nextN with a bounded UTC search, and describe() for human-readable schedule sentences.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "llms.txt"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "cron",
+    "cron-parser",
+    "cron-expression",
+    "schedule",
+    "nextRun",
+    "task-scheduler",
+    "agent-tools"
+  ],
+  "author": "Ruzylo-cloud",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
